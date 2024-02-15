@@ -2,9 +2,9 @@ from jira import JIRA
 
 from src.brain.question_to_function import QuestionToFunction
 
-temp_jira_url = 'https://jira.atlassian.com' # This needs to be updated per user's JIRA instance with their integration details
+temp_jira_url = 'https://jira.atlassian.com' # TODO : This needs to be updated per user's JIRA instance with their integration details
 class JiraIntegration:
-    def __init__(self, jira_url):
+    def __init__(self, jira_url, auth_token=None):
         self.jira = JIRA(jira_url)
 
     def get_projects(self):
